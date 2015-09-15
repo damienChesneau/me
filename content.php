@@ -1,9 +1,9 @@
 <div id="blurb">
     <img src="img/photo.jpg" />
     <div>
-        <h1>Bonjour, c'est Damien Chesneau</h1>
+        <h1>Damien Chesneau</h1>
         <p style="color: black" title="Je maitrise Java EE avec JPA, JSF, Spring, EJB, le service web REST en XML et JSON, Android, Maven. Mais pas seulement : Les langages C/C++ et PHP Objet, Symfony 2 sont aussi dans ma boite a outils.">
-            Je suis étudiant en informatique. 
+            Je suis étudiant en Master Informatique à l'université de Paris-Est. 
         </p>
     </div>
 </div>

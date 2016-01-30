@@ -13,7 +13,7 @@
     <a class="email" href="mailto:ches.damien@gmail.com">
         <span class="icon"></span>
         <span class="iconHover"></span>
-       contact@damienchesneau.fr 
+        ches.damien@gmail.com
     </a>
     <ul>
         <li>

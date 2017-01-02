@@ -48,13 +48,8 @@ $("#whereabouts").html("<span>" + status + "</span>");
 if (isSmallDevice) {
 return;
 }
-<?php
-include_once '../persistance/CarteService.php';
-$carteSrv = new CarteService();
-$result = $carteSrv->getCurrentLocalisation();
-$ligne = $result->fetch();
-echo 'var longitude = '.$ligne->LONGITUDE.'; ';
-echo 'var latitude = '.$ligne->LATITUDE.'; '; ?>
+var longitude = 2.3444653;
+var latitude = 48.8595199;
 var latlng = null;
 var newd = new Date();
 var monthInCurrent = newd.getUTCMonth();

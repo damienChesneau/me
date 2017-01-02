@@ -24,8 +24,7 @@ hr {
 #main {
     background: #FFF;
     width:  333px;
-    /*height: 375px;*/
-    height: 410px;
+    height: 375px;
     padding: 20px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;

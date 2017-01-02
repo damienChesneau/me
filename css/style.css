@@ -24,8 +24,7 @@ hr {
 #main {
     background: #FFF;
     width:  333px;
-    /*height: 375px;*/
-    height: 410px;
+    height: 375px;
     padding: 20px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -171,7 +170,7 @@ hr {
     display: block;
     width: 31px;
     height: 31px;
-    background-image: url(../../img/sprite.png);
+    background-image: url(../img/sprite.png);
     background-repeat: no-repeat;
     position: absolute;
     top: -1px;
@@ -183,7 +182,7 @@ hr {
     display: block;
     width: 31px;
     height: 31px;
-    background-image: url(../../img/sprite.png);
+    background-image: url(../img/sprite.png);
     background-repeat: no-repeat;
     position: absolute;
     top: -1px;

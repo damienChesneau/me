@@ -1,4 +1,3 @@
-     
 var damsc = (function() {
 "use strict";
 var d = new Date(), status, today = {}, map, correctLocation, isSmallDevice = false;

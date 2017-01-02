@@ -54,13 +54,6 @@ var latlng = null;
 var newd = new Date();
 var monthInCurrent = newd.getUTCMonth();
 latlng = new google.maps.LatLng(latitude, longitude);
-//latlng = new google.maps.LatLng(correctLocation.lat, correctLocation.lng);
-//        if(monthInCurrent=="8"){
-//            latlng = new google.maps.LatLng(47.2413661, 6.0100365);
-//        }
-//        else{
-//            latlng = new google.maps.LatLng(correctLocation.lat, correctLocation.lng);
-//        }     
 var myOptions = {
 zoom: 15,
 center: latlng,
@@ -68,7 +61,6 @@ disableDefaultUI: true,
 mapTypeId: google.maps.MapTypeId.ROADMAP
 };
 map = new google.maps.Map(document.getElementById("map"), myOptions);
-//$("#whereabouts").twipsy();
 $("#openMap").removeAttr("disabled").click(function(e) {
 e.preventDefault();
 document.location = "http://maps.google.com/maps?q=" + correctLocation.toGoogle;

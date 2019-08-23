@@ -8,7 +8,7 @@ function writeFr(){
     $("#first-article").find("p[name=little-description]").text("Alors voici ici l'annonce pour l'ouverture de mon blog");
 
     $("#copyright").html("© Copyright Damien Chesneau "+ new Date().getFullYear());
-    $("#switch-lang").html("View in <a onclick=\"toEn()\" >English</a>");
+    $("#switch-lang").html("View in <a href=\"javascript:toEn();\" >English</a>");
 }
 function writeEn(){
     $("#article-duplication").find("a[name=title]").text("The duplication a boost for your project.");
@@ -20,7 +20,7 @@ function writeEn(){
     $("#first-article").find("p[name=little-description]").text("So here is the announcement of the opening of my blog");
 
     $("#copyright").html("© Copyright Damien Chesneau "+ new Date().getFullYear());
-    $("#switch-lang").html("Voir en <a onclick=\"toFrench()\" >Français</a>");
+    $("#switch-lang").html("Voir en <a href=\"javascript:toFrench();\" >Français</a>");
 }
 
 function toFrench(){

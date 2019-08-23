@@ -7,7 +7,7 @@ function writeFr(){
     $("head > title").text("Blog - " + title);
 
     $("#copyright").html("© Copyright Damien Chesneau "+ new Date().getFullYear());
-    $("#switch-lang").html("View in <a onclick=\"toEn()\" >English</a>");
+    $("#switch-lang").html("View in <a href=\"javascript:toEn();\" >English</a>");
 }
 function writeEn(){
     var title ="My blog opening :)";
@@ -18,7 +18,7 @@ function writeEn(){
     $("head > title").text("Blog - " + title);
 
     $("#copyright").html("© Copyright Damien Chesneau "+ new Date().getFullYear());
-    $("#switch-lang").html("Voir en <a onclick=\"toFrench()\" >Français</a>");
+    $("#switch-lang").html("Voir en <a href=\"javascript:toFrench();\" >Français</a>");
 }
 
 function toFrench(){

@@ -1,18 +1,21 @@
 function writeFr(){
-    $("h1[name=title]").text("Ouverture de mon blog :)");
+    var title = "Ouverture de mon blog :)";
+    $("h1[name=title]").text(title);
     $("li[name=date]").text("23 Aout 2019");
 
-    $("#firstp").text("Alors voici ici l'annonce pour l'ouverture de mon blog");
+    $("#firstp").text("Alors voici ici l'annonce pour l'ouverture de mon blog.");
+    $("head > title").text("Blog - " + title);
 
     $("#copyright").html("© Copyright Damien Chesneau "+ new Date().getFullYear());
     $("#switch-lang").html("View in <a onclick=\"toEn()\" >English</a>");
 }
 function writeEn(){
-    $("h1[name=title]").text("My blog opening.");
+    var title ="My blog opening :)";
+    $("h1[name=title]").text(title);
     $("li[name=date]").text("Aout 23 2019");
 
-    $("#firstp").text("So here is the announcement of the opening of my blog");
-
+    $("#firstp").text("So here is the announcement of the opening of my blog.");
+    $("head > title").text("Blog - " + title);
 
     $("#copyright").html("© Copyright Damien Chesneau "+ new Date().getFullYear());
     $("#switch-lang").html("Voir en <a onclick=\"toFrench()\" >Français</a>");

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Blog - Damien Chesneau</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="SHORTCUT ICON" href="https://secure.gravatar.com/avatar/615d30be9faf7e704fe7a1a7c923199d/24">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/vendor.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../js/modernizr.js"></script>
+    <script src="../js/jquery-3.2.1.min.js" defer></script>
+    <script src="../js/plugins.js" defer></script>
+    <script src="../js/main.js" defer></script>
+    <script src="../js/stringsBlogFirstArticle.js" defer></script>
+</head>
+<body>
+<div id="preloader">
+    <div id="loader" class="dots-fade">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+
+<div id="top" class="s-wrap site-wrapper">
+    <div class="s-content content">
+        <main class="row content__page">
+            <article class="column large-full entry format-standard">
+                <div class="media-wrap entry__media">
+                    <div class="entry__post-thumb">
+                        <img src="./main-all-min.jpg"
+                             srcset="./main-all.jpg 20000w,
+                                     ./main-all-min.jpg 2000w"
+                             sizes="(max-width: 20000px) 2000vw, 20000px" alt="">
+                    </div>
+                </div>
+
+                <div class="content__page-header entry__header">
+                    <h1 class="display-1 entry__title" name="title"></h1>
+                    <ul class="entry__header-meta">
+                        <li class="author">By<img
+                                style="height: 20px; width: 20px; display: inline; margin-bottom: -4px; margin-left: 7px;"
+                                alt="Profile picture"
+                                src="https://secure.gravatar.com/avatar/615d30be9faf7e704fe7a1a7c923199d/75"/>
+                            <a href="/">Damien Chesneau</a></li>
+                        <li class="date" name="date"></li>
+                        <li class="cat-links">
+                            <a href="#0">Code</a><a href="#0">Java</a>
+                        </li>
+                    </ul>
+                </div> <!-- end entry__header -->
+                <div class="entry__content">
+                    <p class="lead drop-cap" id="firstp"></p>
+
+                    <p class="entry__tags">
+                        <span>Post Tags</span>
+                        <span class="entry__tag-list">
+                                <a href="#0">Java</a>
+                                <a href="#0">Code</a>
+                        </span>
+                    </p>
+                </div> <!-- end entry content -->
+                <div class="entry__related">
+                    <div id="disqus_thread"></div>
+                </div> <!-- end entry related -->
+            </article> <!-- end column large-full entry-->
+            <script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = "https://damienchesneau.fr/blog/first-article";  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = 'first-article'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://https-damienchesneau-fr.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered
+                by Disqus.</a></noscript>
+
+    </div> <!-- end comments-wrap -->
+    </main>
+
+</div> <!-- end s-content -->
+<footer class="s-footer">
+    <div class="row">
+        <div class="column large-full footer__content">
+            <div class="footer__copyright">
+                <span id="copyright"></span>
+                <span id="switch-lang"></span>
+            </div>
+        </div>
+    </div>
+    <div class="go-top">
+        <a class="smoothscroll" title="Back to Top" href="#top"></a>
+    </div>
+</footer>
+</div>
+</body>
+</html>

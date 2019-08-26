@@ -1,9 +1,9 @@
 function writeFr(){
-    $("#article-duplication").find("a[name=title]").text("Ouverture de mon blog.");
+    $("#article-duplication").find("a[name=title]").text("");
     $("#article-duplication").find("a[name=date]").text("23 Aout 2019");
-    $("#article-duplication").find("p[name=little-description]").text("Alors voici ici l'annonce pour l'ouverture de mon blog.");
+    $("#article-duplication").find("p[name=little-description]").text("");
 
-    $("#first-article").find("a[name=title]").text("Ouverture de mon blog :)");
+    $("#first-article").find("a[name=title]").text("");
     $("#first-article").find("a[name=date]").text("19 Aout 2019");
     $("#first-article").find("p[name=little-description]").text("Alors voici ici l'annonce pour l'ouverture de mon blog");
 
@@ -11,16 +11,13 @@ function writeFr(){
     $("#switch-lang").html("View in <a href=\"javascript:toEn();\" >English</a>");
 }
 function writeEn(){
-    $("#article-duplication").find("a[name=title]").text("The duplication a boost for your project.");
-    $("#article-duplication").find("a[name=date]").text("Aout 19 2019");
-    $("#article-duplication").find("p[name=little-description]").text("In this first post I'll explain to you how sometimes we can put intentionally duplicated portions of code in the project. Not the dirty way... Yes you well read that right, we'll voluntarily write duplicated code... Heavy consequences...");
 
-    $("#first-article").find("a[name=title]").text("My blog opening.");
-    $("#first-article").find("a[name=date]").text("Aout 23 2019");
-    $("#first-article").find("p[name=little-description]").text("So here is the announcement of the opening of my blog");
+    $("#first-article").find("a[name=title]").text("");
+    $("#first-article").find("a[name=date]").text("");
+    $("#first-article").find("p[name=little-description]").text("");
 
-    $("#copyright").html("© Copyright Damien Chesneau "+ new Date().getFullYear());
-    $("#switch-lang").html("Voir en <a href=\"javascript:toFrench();\" >Français</a>");
+    $("#copyright").html(" "+ new Date().getFullYear());
+    $("#switch-lang").html("");
 }
 
 function toFrench(){
@@ -67,7 +64,7 @@ function getUrlParameter(name) {
 $( document ).ready(function() {
     var a = getUrlParameter("lang");
     var userLang = navigator.language || navigator.userLanguage;
-    if (a) {
+    if (userLang) {
         if(a==="fr" || a==="FR"){
             userLang ="fr-FR";
         }else if(a==="en" || a==="EN"){

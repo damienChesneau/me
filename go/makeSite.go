@@ -1,54 +1,54 @@
 package main
 
 import (
-    "fmt"
-    "bufio"
-    "path"
-    "io/ioutil"
-    "io"
-    "os"
-    "strings"
-    "github.com/PuerkitoBio/goquery"
-    "path/filepath"
+	"bufio"
+	"fmt"
+	"github.com/PuerkitoBio/goquery"
+	"io"
+	"io/ioutil"
+	"os"
+	"path"
+	"path/filepath"
+	"strings"
 )
 // Need to be launched inside template directory.
 func File(src, dst string) error {
 	var err error
-	var srcfd *os.File
-	var dstfd *os.File
-	var srcinfo os.FileInfo
+	var srcFile *os.File
+	var dstFile *os.File
+	var srcInfo os.FileInfo
 
-	if srcfd, err = os.Open(src); err != nil {
+	if srcFile, err = os.Open(src); err != nil {
 		return err
 	}
-	defer srcfd.Close()
+	defer srcFile.Close()
 
-	if dstfd, err = os.Create(dst); err != nil {
+	if dstFile, err = os.Create(dst); err != nil {
 		return err
 	}
-	defer dstfd.Close()
+	defer dstFile.Close()
 
-	if _, err = io.Copy(dstfd, srcfd); err != nil {
+	if _, err = io.Copy(dstFile, srcFile); err != nil {
 		return err
 	}
-	if srcinfo, err = os.Stat(src); err != nil {
+	if srcInfo, err = os.Stat(src); err != nil {
 		return err
 	}
-	return os.Chmod(dst, srcinfo.Mode())
+	return os.Chmod(dst, srcInfo.Mode())
 }
 
 
 func getCount(dir string) int {
     count :=0
     if dir == "."  {
-        count = 0;
-    } else {
+        count = 0
+	} else {
         count = strings.Count(dir, "\\") + 1
     }
     return count
 }
 
-func redirictJs(dir string) string{
+func redirectJs(dir string) string{
     less := "../"
     start := "./"
     count := getCount(dir)
@@ -70,60 +70,16 @@ if(userLang.includes("FR") || userLang.includes("fr")){
     return a
  }
 
-func remove(s []string, r string) []string {
-    for i, v := range s {
-        if v == r {
-            return append(s[:i], s[i+1:]...)
-        }
-    }
-    return s
-}
-
-func listAllDir(dir string) []string {
-    files, _ := filepath.Glob("*")
-    return files
-}
-
-func copyAndChangeLang(filePath string){
-    strings1 := []string{"fr", "en"}
-    b, err := ioutil.ReadFile("template\\"+filePath)
-    if err != nil {
-        fmt.Print(err)
-    }
-    fileContent := string(b)
-    for _, s := range strings1 {
-        a := []string{"fr", "en"}
-        copy(a, strings1)
- 	    for i := 0; i < len(a); i++ {
-            if a[i] == s {
-                a = append(a[:i], a[i+1:]...)
-                i--
-            }
-        }
-        f, err := os.Create(".\\build\\"+s+"\\"+filePath)
-        if err != nil {
-             fmt.Print(err)
-         }
-        doc, _ := goquery.NewDocumentFromReader(strings.NewReader((fileContent)))
-        doc.Find("p[lang=\""+a[0]+"\"]").Each(func(i int, h1 *goquery.Selection) { h1.Remove() })
-        htmlResult, _ := doc.Html()
-
-        w := bufio.NewWriter(f)
-        w.WriteString(htmlResult)
-        w.Flush()
-    }
-}
-
 func Dir(src string, dst string) error {
 	var err error
 	var fds []os.FileInfo
-	var srcinfo os.FileInfo
+	var srcInfo os.FileInfo
 
-	if srcinfo, err = os.Stat(src); err != nil {
+	if srcInfo, err = os.Stat(src); err != nil {
 		return err
 	}
 
-	if err = os.MkdirAll(dst, srcinfo.Mode()); err != nil {
+	if err = os.MkdirAll(dst, srcInfo.Mode()); err != nil {
 		return err
 	}
 
@@ -131,15 +87,15 @@ func Dir(src string, dst string) error {
 		return err
 	}
 	for _, fd := range fds {
-		srcfp := path.Join(src, fd.Name())
-		dstfp := path.Join(dst, fd.Name())
+		srcFilePath := path.Join(src, fd.Name())
+		dstFilePath := path.Join(dst, fd.Name())
 
 		if fd.IsDir() {
-			if err = Dir(srcfp, dstfp); err != nil {
+			if err = Dir(srcFilePath, dstFilePath); err != nil {
 				fmt.Println(err)
 			}
 		} else {
-			if err = File(srcfp, dstfp); err != nil {
+			if err = File(srcFilePath, dstFilePath); err != nil {
 				fmt.Println(err)
 			}
 		}
@@ -177,8 +133,8 @@ func main() {
             f, _ := os.Create("..\\..\\"+dir+"\\"+"index.html")
 
             fileContent, _ := ioutil.ReadFile("../redirict.html")
-            doc, _ := goquery.NewDocumentFromReader(strings.NewReader((string(fileContent))))
-            redirictJs := redirictJs(dir)
+            doc, _ := goquery.NewDocumentFromReader(strings.NewReader(string(fileContent)))
+            redirictJs := redirectJs(dir)
             doc.Find("script[id=\"redirection\"]").Each(func(i int, h1 *goquery.Selection) { h1.ReplaceWithHtml("<script>"+redirictJs+"</script>") })
             htmlResult, _ := doc.Html()
             w := bufio.NewWriter(f)
@@ -206,7 +162,7 @@ func main() {
                    if err != nil {
                         fmt.Print(err)
                     }
-                   doc, _ := goquery.NewDocumentFromReader(strings.NewReader((fileContent)))
+                   doc, _ := goquery.NewDocumentFromReader(strings.NewReader(fileContent))
                    doc.Find("[plang=\""+a[0]+"\"]").Each(func(i int, h1 *goquery.Selection) { h1.Remove() })
                    htmlResult, _ := doc.Html()
 

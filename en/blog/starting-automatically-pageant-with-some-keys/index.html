@@ -1,0 +1,132 @@
+<!DOCTYPE html><html class="no-js"><head>
+    <meta charset="utf-8"/>
+    
+    <title plang="en">Starting automatically Pageant with some keys. - Damien Chesneau</title>
+
+    
+    <meta plang="en" name="description" content="Starting automatically Pageant with some keys."/>
+    <meta name="author" content="Damien Chesneau"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="SHORTCUT ICON" href="https://secure.gravatar.com/avatar/615d30be9faf7e704fe7a1a7c923199d/24"/>
+
+    <link rel="stylesheet" href="../../../blog-common/css/base.css"/>
+    <link rel="stylesheet" href="../../../blog-common/css/vendor.css"/>
+    <link rel="stylesheet" href="../../../blog-common/css/main.css"/>
+    <script src="../../../blog-common/js/modernizr.js"></script>
+    <script src="../../../blog-common/js/jquery-3.2.1.min.js" defer=""></script>
+    <script src="../../../blog-common/js/plugins.js" defer=""></script>
+    <script src="../../../blog-common/js/main.js" defer=""></script>
+
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-47421440-1"></script>
+    <script src="../../../js/ganalytics.js"></script>
+</head>
+<body>
+<div id="preloader">
+    <div id="loader" class="dots-fade">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+
+<div id="top" class="s-wrap site-wrapper">
+    <div class="s-content content">
+        <main class="row content__page">
+            <article class="column large-full entry format-standard">
+                <div class="media-wrap entry__media">
+                    <div class="entry__post-thumb">
+                        <img src="../../../blog-common/starting-automatically-pageant-with-some-keys/head.jpg" srcset="../../../blog-common/starting-automatically-pageant-with-some-keys/head.jpg 20000w,
+                                     ../../../blog-common/starting-automatically-pageant-with-some-keys/head.jpg 2000w" sizes="(max-width: 20000px) 2000vw, 20000px" alt=""/>
+                    </div>
+                </div>
+
+                <div class="content__page-header entry__header">
+                    
+                    <h1 plang="en" class="display-1 entry__title" name="title">Starting automatically Pageant with some
+                        keys.</h1>
+                    <ul class="entry__header-meta">
+                        
+                        <li plang="en" class="author">By
+                            <img style="height: 20px; width: 20px; display: inline; margin-bottom: -4px; margin-left: 7px;" alt="Profile picture" src="https://secure.gravatar.com/avatar/615d30be9faf7e704fe7a1a7c923199d/75"/>
+                            <a href="/">Damien Chesneau</a>
+                        </li>
+                        
+                        <li plang="en" class="date" name="date">December 2 2019</li>
+                        <li class="cat-links">
+                            
+                            <a plang="en" href="#0">SSH</a>
+                        </li>
+                    </ul>
+                </div> <!-- end entry__header -->
+                <div class="entry__content">
+                    
+                    <p plang="en" class="lead drop-cap">Some software is used every day which requires a configuration that is
+                        certainly easy to implement, but repetitive. For example for connecting to virtual machines in
+                        the cloud, I use Putty because its configuration is quite simple. For my use, I just have to
+                        specify the name of the machine or its IP address (for example: root@192.168.1.1) as well as the
+                        private key for authentication.</p>
+
+                    
+                    <p plang="en" class="lead">Except that in the context of the cloud I have to create/destroy many
+                        virtual machines per day and that the associated private keys can be different It is often
+                        tedious to find the key that corresponds to the VM that has just been created.</p>
+
+                    
+                    <p plang="en" class="lead">That&#39;s why I created the script below to launch Pageant with a set of
+                        keys contained in a folder. And by placing it in the folder &#34;shell:startup&#34; (Action Windows+R)
+                        it allows it to launch directly at Windows startup.</p>
+                    <script src="https://gist.github.com/damienChesneau/205a499b9abe1fe9a3bf358b2ffc5b82.js"></script>
+                    <p class="entry__tags">
+                        <span>Tags</span>
+                        <span class="entry__tag-list">
+                                
+                                <a plang="en" href="#0">SSH</a>
+                        </span>
+                    </p>
+                </div> <!-- end entry content -->
+                <div class="entry__related">
+                    <div id="disqus_thread"></div>
+                </div> <!-- end entry related -->
+            </article> <!-- end column large-full entry-->
+            <script>
+                /**
+                 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+                /*
+                var disqus_config = function () {
+                this.page.url = "https://en.damienchesneau.fr/blog/starting-automatically-pageant-with-some-keys";  // Replace PAGE_URL with your page's canonical URL variable
+                this.page.identifier = 'starting-automatically-pageant-with-some-keys'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                };
+                */
+                (function () { // DON'T EDIT BELOW THIS LINE
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://https-damienchesneau-fr.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+
+
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered
+                by Disqus.</a></noscript>
+
+        </main>
+    </div> <!-- end comments-wrap -->
+</div> <!-- end s-content -->
+<footer class="s-footer">
+    <div class="row">
+        <div class="column large-full footer__content">
+            <div class="footer__copyright">
+                <span id="copyright">© Copyright Damien Chesneau</span>
+                <span plang="en" id="switch-lang">Voir en <a href="../../../fr/blog/starting-automatically-pageant-with-some-keys/">Français</a></span>
+                
+            </div>
+        </div>
+    </div>
+    <div class="go-top">
+        <a class="smoothscroll" title="Back to Top" href="#top"></a>
+    </div>
+</footer>
+<!--</div>-->
+
+</body></html>
